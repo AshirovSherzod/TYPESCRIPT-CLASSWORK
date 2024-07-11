@@ -6,9 +6,9 @@ import { defaultWishlist } from '@/lib/features/wishlist/wishlistSlice'
 
 const DefaultValues = () => {
     const dispatch = useDispatch()
-    useEffect(() => {
+    useEffect(() => {   
         dispatch(defaultCounter(+localStorage.getItem("counter")))
-        dispatch(defaultWishlist(JSON.parse(localStorage.getItem("wishlist") || [])))
+        dispatch(defaultWishlist(JSON.parse(localStorage.getItem("wishlist")) || []))
     }, [])
     return null
 }
